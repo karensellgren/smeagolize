@@ -21,3 +21,26 @@ const mobileMenu = document.getElementById("mobile-menu");
 menuToggle.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
 });
+
+//Gauge
+const ctx = document.getElementById("sentimentChart").getContext("2d");
+
+new Chart(ctx, {
+    type: "doughnut",
+    data: {
+        labels: ["Positive", "Neutral", "Negative"],
+        datasets: [{
+            data: [600, 250, 150],
+            backgroundColor: ["#4CAF50", "#FF9800", "#F44336"],
+            borderWidth: 1,
+        }]
+    },
+    options: {
+        cutout: "60%",
+        responsive: true,
+        aspectRatio: 1,
+        plugins: {
+            legend: { display: false }
+        }
+    }
+});
