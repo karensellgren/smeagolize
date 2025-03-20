@@ -45,3 +45,59 @@ new Chart(ctx, {
         }
     }
 });
+
+//Chart Timeline
+const chartCtx = document.getElementById('sentimentTimelineChart').getContext('2d');
+
+const sentimentData = {
+    labels: ["11PM", "12PM", "1AM", "2AM"],
+    datasets: [
+        {
+            label: "Positive",
+            data: [140, 160, 180, 120],
+            backgroundColor: "green",
+            borderRadius: 10
+        },
+        {
+            label: "Neutral",
+            data: [80, 120, 30, 20],
+            backgroundColor: "orange",
+            borderRadius: 10
+        },
+        {
+            label: "Negative",
+            data: [20, 80, 30, 20],
+            backgroundColor: "red",
+            borderRadius: 10
+        }
+    ]
+};
+
+const sentimentChart = new Chart(chartCtx, {
+    type: "bar",
+    data: sentimentData,
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: "top",
+                labels: {
+                    font: { size: 14 },
+                    color: "black"
+                }
+            }
+        },
+        scales: {
+            x: {
+                stacked: true,
+                ticks: { color: "black", font: { size: 14 } }
+            },
+            y: {
+                stacked: true,
+                ticks: { color: "black", font: { size: 14 } }
+            }
+        }
+    }
+});
+

@@ -139,6 +139,88 @@
                 </div>
             </div>
         </div>
+
+        <!-- Chart Timeline -->
+        <div class="bg-white p-6 rounded-lg shadow-md border border-pink-300 max-w-6xl mx-auto mt-6">
+            <h2 class="text-xl font-bold mb-4">Comments Sentiment Timeline</h2>
+
+            <!-- Chart Container -->
+            <div class="relative">
+                <canvas id="sentimentTimelineChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
+
+            <!-- First Box -->
+            <div class="bg-white p-6 rounded-lg shadow-md border border-pink-300 w-full max-w-sm mx-auto">
+
+                <div class="table-header positive">
+                    <span class="dot positive-dot"></span> Positive Comments Mentions
+                </div>
+                <table>
+                    <tr>
+                        <td>Love it</td>
+                        <td>500 Mentions</td>
+                    </tr>
+                    <tr>
+                        <td>Will buy it</td>
+                        <td>100 Mentions</td>
+                    </tr>
+                    <tr>
+                        <td>Amazed</td>
+                        <td>25 Mentions</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Second Box -->
+            <div class="bg-white p-6 rounded-lg shadow-md border border-pink-300 w-full max-w-sm mx-auto">
+
+                <div class="table-header neutral">
+                    <span class="dot neutral-dot"></span> Neutral Comments Mentions
+                </div>
+                <table>
+                    <tr>
+                        <td>Similar To..</td>
+                        <td>100 Mentions</td>
+                    </tr>
+                    <tr>
+                        <td>Unrelated</td>
+                        <td>50 Mentions</td>
+                    </tr>
+                    <tr>
+                        <td>Size Tips</td>
+                        <td>25 Mentions</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Third Box -->
+            <div class="bg-white p-6 rounded-lg shadow-md border border-pink-300 w-full max-w-sm mx-auto">
+                <div class="table-header negative">
+                    <span class="dot negative-dot"></span> Negative Comments Mentions
+                </div>
+                <table>
+                    <tr>
+                        <td>Bad Quality</td>
+                        <td>100 Mentions</td>
+                    </tr>
+                    <tr>
+                        <td>Too Small</td>
+                        <td>50 Mentions</td>
+                    </tr>
+                    <tr>
+                        <td>Too Ugly</td>
+                        <td>25 Mentions</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        </div>
+
+
     </main>
 
     <script src="script.js"></script>
