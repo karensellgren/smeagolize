@@ -1,3 +1,4 @@
+// JavaScript for Gauge & Mobile Menu 
 document.addEventListener('DOMContentLoaded', function () {
     const score = 3; // Example: Set your sentiment score here (1 to 5)
     const maxScore = 5;
@@ -22,7 +23,7 @@ menuToggle.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
 });
 
-//Gauge
+//Chart 
 const ctx = document.getElementById("sentimentChart").getContext("2d");
 
 new Chart(ctx, {
