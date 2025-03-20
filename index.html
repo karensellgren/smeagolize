@@ -62,22 +62,22 @@
     <main class="max-w-6xl mx-auto mt-8 bg-white p-6 rounded-lg shadow-lg">
 
         <!-- Input Section -->
-        <div class="flex items-center space-x-4">
+        <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
             <img src="instagram-icon.png" alt="Instagram" class="w-8 h-8">
-            <input type="text" class="w-full p-2 border rounded-lg" placeholder="Instagram Post URL">
+            <input type="text" class="w-full sm:w-auto p-2 border rounded-lg" placeholder="Instagram Post URL">
             <button class="bg-pink-500 text-white px-4 py-2 rounded-lg hover:bg-pink-600">Analyze</button>
         </div>
 
         <!-- Stats Section -->
-        <div class="grid grid-cols-3 gap-4 mt-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
 
             <!-- First Box -->
-            <div class="bg-white p-6 rounded-lg shadow-md border border-pink-300 w-full max-w-md mx-auto">
+            <div class="bg-white p-6 rounded-lg shadow-md border border-pink-300 w-full max-w-sm mx-auto">
 
                 <!-- Chart -->
                 <h2 class="text-xl font-bold mb-4 text-center">Comments Sentiment</h2>
-                <div class="flex justify-center items-center space-x-8">
-                    <div class="w-[200px]">
+                <div class="flex flex-col sm:flex-row justify-center items-center space-x-8">
+                    <div class="w-[150px] sm:w-[200px]">
                         <canvas id="sentimentChart" width="50" height="50"></canvas>
                     </div>
 
@@ -96,9 +96,8 @@
                 </div>
             </div>
 
-
             <!-- Second Box -->
-            <div class="bg-white p-6 rounded-lg shadow-md border border-pink-300 w-full max-w-md mx-auto">
+            <div class="bg-white p-6 rounded-lg shadow-md border border-pink-300 w-full max-w-sm mx-auto">
                 <h2 class="text-xl font-bold mb-4 text-center">Sentiment Rating</h2>
                 <div class="sentiment-chart">
                     <div class="gauge">
@@ -114,7 +113,7 @@
             </div>
 
             <!-- Third Box -->
-            <div class="bg-white p-6 rounded-lg shadow-md border border-pink-300 w-full max-w-md mx-auto">
+            <div class="bg-white p-6 rounded-lg shadow-md border border-pink-300 w-full max-w-sm mx-auto">
                 <div class="item">
                     <img src="comment-icon.png" alt="Comment Icon" class="icon">
                     <div class="text">
@@ -140,12 +139,8 @@
                 </div>
             </div>
         </div>
-
-
-
-
-
     </main>
+
     <script src="script.js"></script>
     <script>
         const ctx = document.getElementById("sentimentChart").getContext("2d");
