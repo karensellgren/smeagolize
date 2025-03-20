@@ -1,0 +1,125 @@
+/* Gauge Start */
+.sentiment-chart {
+    width: 300px;
+    text-align: center;
+}
+
+.gauge {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 100px 100px 0 0;
+    background-color: #638be0;
+}
+
+.gauge-fill {
+    width: 100%;
+    height: 100%;
+    background-color: #a8e063;
+    /* Green fill */
+    border-radius: 100px 100px 0 0;
+    transform-origin: bottom center;
+    transform: rotate(0deg);
+    /* Initial fill, adjust with JS */
+}
+
+.gauge-needle {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 6px;
+    height: 90px;
+    background-color: #d11141;
+    /* Pink needle */
+    transform-origin: bottom center;
+    transform: translateX(-3px) rotate(0deg);
+    /* Initial needle, adjust with JS */
+}
+
+.gauge::before,
+.gauge-fill::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    /* Adjust as needed */
+    height: 50px;
+    /* Adjust as needed */
+    background-color: #f0f0f0;
+    /* Match background color */
+    border-radius: 50px 50px 0 0;
+}
+
+.rating {
+    margin-top: 5px;
+}
+
+.emoji {
+    font-size: 1em;
+}
+
+.score {
+    font-size: 1em;
+    font-weight: bold;
+    display: block;
+    margin-top: 0px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.sentiment {
+    color: green;
+    margin-top: 5px;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 10px;
+
+}
+
+/* Gauge End */
+
+
+/*Third Box Start */
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 10px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 25px;
+    filter: invert(40%) sepia(50%) saturate(2000%) hue-rotate(320deg) brightness(100%) contrast(90%);
+    /* Pink icon color */
+}
+
+.text {
+    text-align: left;
+    display: inline-block;
+}
+
+.number {
+    font-size: 1em;
+    font-weight: bold;
+    display: block;
+
+}
+
+.label {
+    font-size: 1em;
+    color: #555;
+}
+
+.separator {
+    border-bottom: 2px dashed #ccc;
+    margin: 10px 0;
+}
+
+/*Third Box Ends */
