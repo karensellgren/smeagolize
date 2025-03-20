@@ -17,10 +17,19 @@
     <header class="bg-pink-200 p-4 flex justify-between items-center">
         <div class="flex items-center space-x-2">
             <img src="logo.png" alt="Smeagolize Logo" class="w-12 h-12">
-            <h1 class="text-xl font-bold text-pink-700">Smeagolize</h1>
-            <h2 class="text-sm font-medium text-pink-600 mt-1">IG Comment Sentiment Analyser</h2>
+            <div>
+                <h1 class="text-xl font-bold text-pink-700">Smeagolize</h1>
+                <h2 class="text-sm font-medium text-pink-600">IG Comment Sentiment Analyser</h2>
+            </div>
         </div>
-        <nav class="flex space-x-6">
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-toggle" class="md:hidden p-2 text-pink-700 focus:outline-none">
+            <img src="menu-icon.png" alt="Menu" class="w-6 h-6">
+        </button>
+
+        <!-- Navigation Menu -->
+        <nav id="menu" class="hidden md:flex space-x-6">
             <a href="#" class="text-pink-700 hover:underline flex items-center space-x-2">
                 <img src="icon-search.png" alt="Search" class="w-5 h-5">
                 <span>Search</span>
@@ -36,9 +45,17 @@
             <a href="#" class="text-pink-700 hover:underline flex items-center space-x-2">
                 <img src="icon-settings.png" alt="Settings" class="w-5 h-5">
                 <span>Settings</span>
-
             </a>
         </nav>
+
+        <!-- Mobile Menu (Hidden by Default) -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-16 right-4 bg-pink-100 shadow-lg rounded-lg w-48 p-2">
+            <a href="#" class="block text-pink-700 hover:bg-pink-300 p-2 rounded">Search</a>
+            <a href="#" class="block text-pink-700 hover:bg-pink-300 p-2 rounded">Home</a>
+            <a href="#" class="block text-pink-700 hover:bg-pink-300 p-2 rounded">History</a>
+            <a href="#" class="block text-pink-700 hover:bg-pink-300 p-2 rounded">Settings</a>
+        </div>
     </header>
 
     <!-- Main Content -->

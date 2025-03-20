@@ -13,3 +13,11 @@ document.addEventListener('DOMContentLoaded', function () {
     fill.style.transform = `rotate(${fillAngle}deg)`;
     needle.style.transform = `translateX(-3px) rotate(${needleAngle}deg)`;
 });
+
+//Toggle Mobile Menu
+const menuToggle = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
+
+menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+});
